@@ -1,12 +1,11 @@
 " Vim syntax file
 " Filename:     nagios.vim
+" Description:  Make Vim recognize Nagios configuration file syntax
 " Language:     Nagios template object configuration file
-" Maintainer:   Elan Ruusamäe <glen@pld-linux.org>
 " Author:       Lance Albertson <ramereth@gentoo.org>
 " Author:       Ava Arachne Jarvis <ajar@katanalynx.dyndns.org>
-" URL:          http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/SOURCES/nagios.vim
-" Version Info: $Revision: 1.8 $
-" Last Change:  $Date: 2008-06-08 10:33:07 $ UTC
+" Author:       Vincent BESANCON <besancon.vincent@gmail.com>
+" URL:          https://github.com/bigbrozer/vim-nagios
 
 if !exists("main_syntax")
   if version < 600
@@ -49,8 +48,10 @@ syn match nagiosMacro  '\$ADMIN\(EMAIL\|PAGER\)\$'
 syn match nagiosMacro  '\$\(SERVICE\|HOST\)ATTEMPT\$'
 syn match nagiosMacro  '\$LAST\(HOST\|SERVICE\)CHECK\$'
 
+syn match nagiosCustVar '\s\+_[A-Z0-9]\+'
+
 syn region nagiosDefBody start='{' end='}'
-	\ contains=nagiosComment,nagiosDirective,nagiosMacro,nagiosConstant,nagiosString,nagiosSpecial transparent
+	\ contains=nagiosComment,nagiosDirective,nagiosMacro,nagiosConstant,nagiosString,nagiosSpecial,nagiosCustVar transparent
 
 syn keyword nagiosDirective contained name register use
 syn keyword nagiosDirective contained active_checks_enabled address alias check_command
@@ -91,3 +92,4 @@ hi link nagiosDirective Define
 hi link nagiosMacro Macro
 hi link nagiosString String
 hi link nagiosSpecial Special
+hi link nagiosCustVar Identifier
