@@ -48,7 +48,7 @@ syn match nagiosMacro  '\$ADMIN\(EMAIL\|PAGER\)\$'
 syn match nagiosMacro  '\$\(SERVICE\|HOST\)ATTEMPT\$'
 syn match nagiosMacro  '\$LAST\(HOST\|SERVICE\)CHECK\$'
 
-syn match nagiosCustVar '\s\+_[A-Z0-9]\+'
+syn match nagiosCustVar '\s\+_[A-Z0-9_]\+'
 
 syn region nagiosDefBody start='{' end='}'
 	\ contains=nagiosComment,nagiosDirective,nagiosMacro,nagiosConstant,nagiosString,nagiosSpecial,nagiosCustVar transparent
@@ -65,7 +65,7 @@ syn keyword nagiosDirective contained flap_detection_enabled freshness_threshold
 syn keyword nagiosDirective contained friday high_flap_threshold host_name
 syn keyword nagiosDirective contained host_notification_commands
 syn keyword nagiosDirective contained host_notification_options
-syn keyword nagiosDirective contained host_notification_period hostgroup_name servicegroup_name hostgroups servicegroups
+syn keyword nagiosDirective contained host_notification_period hostgroup_name servicegroup_name hostgroups hostgroup_members servicegroups
 syn keyword nagiosDirective contained is_volatile last_notification
 syn keyword nagiosDirective contained low_flap_threshold max_check_attempts
 syn keyword nagiosDirective contained members monday normal_check_interval
