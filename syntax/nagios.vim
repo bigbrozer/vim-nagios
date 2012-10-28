@@ -49,6 +49,7 @@ syn match nagiosMacro  '\$\(SERVICE\|HOST\)ATTEMPT\$'
 syn match nagiosMacro  '\$LAST\(HOST\|SERVICE\)CHECK\$'
 
 syn match nagiosCustVar '\s\+_[A-Z0-9_]\+'
+syn match nagiosCustVar '\$_\(HOST\|SERVICE\).*\$'
 
 syn region nagiosDefBody start='{' end='}'
 	\ contains=nagiosComment,nagiosDirective,nagiosMacro,nagiosConstant,nagiosString,nagiosSpecial,nagiosCustVar transparent
