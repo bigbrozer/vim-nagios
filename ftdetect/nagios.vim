@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *{dc_features,dc_local,dc_global}/trunk/*.cfg setlocal filetype=nagios
+autocmd BufNewFile,BufRead *{dc_features,dc_local,dc_global}/*.cfg setlocal filetype=nagios
