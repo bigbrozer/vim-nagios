@@ -93,4 +93,4 @@ hi link nagiosDirective Define
 hi link nagiosMacro Macro
 hi link nagiosString String
 hi link nagiosSpecial Special
-hi link nagiosCustVar Identifier
+hi link nagiosCustVar Label
