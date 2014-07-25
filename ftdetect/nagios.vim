@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead */*{features,local,global}/*.cfg setlocal filetype=nagios
+autocmd BufNewFile,BufRead */*nagios-configuration/*.cfg setlocal filetype=nagios
